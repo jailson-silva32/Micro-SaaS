@@ -34,7 +34,35 @@ Estou desenvolvendo esseprojeto simples de **API REST** desenvolvido com **Java 
 - IDE como VS Code ou IntelliJ
 
 ### Passos para rodar o projeto
-
 1. Clone este repositório:
-```bash
+bash
 git clone https://github.com/seu-usuario/nome-do-projeto.git
+
+3. Navegue até o diretório do projeto:
+ cd nome-do-projeto
+
+3.Rode o projeto:
+./mvnw spring-boot:run
+
+
+Ou, se preferir, abra o projeto na IDE e execute a classe principal:
+MicroSaasEsteticaApplication.java
+
+📬 Endpoints da API
+Clientes
+POST /clientes → Cadastrar cliente
+
+GET /clientes → Listar clientes
+
+Serviços
+POST /servicos → Cadastrar serviço
+
+GET /servicos → Listar serviços
+
+Agendamentos
+POST /agendamentos → Criar agendamento
+
+GET /agendamentos → Listar agendamentos
+
+
+
