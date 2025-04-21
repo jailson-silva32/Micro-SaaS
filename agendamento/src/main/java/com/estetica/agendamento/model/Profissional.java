@@ -3,15 +3,13 @@ package com.estetica.agendamento.model;
 import jakarta.persistence.*;
 
 @Entity
-public class Servico {
+public class Profissional {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-    private String descricao;
-    private Double preco;
 
     // Getters e Setters
     public Long getId() {
@@ -28,21 +26,5 @@ public class Servico {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public Double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
     }
 }

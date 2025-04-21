@@ -6,10 +6,12 @@ import com.estetica.agendamento.model.Servico;
 import com.estetica.agendamento.repository.AgendamentoRepository;
 import com.estetica.agendamento.repository.ClienteRepository;
 import com.estetica.agendamento.repository.ServicoRepository;
+import com.estetica.agendamento.service.AgendamentoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,9 +28,12 @@ public class AgendamentoController {
     @Autowired
     private ServicoRepository servicoRepository;
 
+    @Autowired
+    private AgendamentoService AgendamentoService;
+
     //POST /agendamentos - criar agendamento
     @PostMapping
-    public Agendamento criAgendamento(@RequestBody AgendamentoRequest request) {
+    public Agendamento criarAgendamento(@RequestBody AgendamentoRequest request) {
         Cliente cliente = clienteRepository.findById(request.clienteId()).orElseThrow();
         Servico servico = servicoRepository.findById(request.servicoId()).orElseThrow();
 
